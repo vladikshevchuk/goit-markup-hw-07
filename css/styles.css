@@ -990,9 +990,6 @@ footer .submit .icon-send {
   border-radius: 4px;
 }
 
-.data-name input:focus-within {
-  
-}
 
 .data-name input:focus-within + span{
   background-color: #2196F3;
