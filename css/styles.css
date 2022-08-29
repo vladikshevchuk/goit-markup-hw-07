@@ -45,7 +45,7 @@ p {
   margin-right: auto;
 }
 
-header {
+.header {
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -990,10 +990,13 @@ footer .submit .icon-send {
   border-radius: 4px;
 }
 
-
-.data-name input:focus-within + span{
-  background-color: #2196F3;
+input:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
 }
+
 
 .data-name {
   display: flex;
@@ -1002,34 +1005,50 @@ footer .submit .icon-send {
 }
 
 .modal-info .data .persone {
-  fill: currentColor;
+  /* fill: currentColor; */
   width: 18px;
   height: 18px;
-  background-image: url(../images/person-black.svg);
 
   position: absolute;
   margin-left: 12px;
   bottom: 21px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-info .data .phone {
   width: 18px;
   height: 18px;
-  background-image: url(../images/phone-black.svg);
 
   position: absolute;
   margin-left: 12px;
   bottom: 21px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-info .data .mail {
   width: 18px;
   height: 18px;
-  background-image: url(../images/email-black.svg);
 
   position: absolute;
   margin-left: 12px;
   bottom: 21px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-name input:focus + .persone {
+  fill: #2196F3;
+}
+
+.data-name input:focus+.mail {
+  fill: #2196F3;
+}
+
+.data-name input:focus+.phone {
+  fill: #2196F3;
+}
+
+.data-name input:focus {
+  border: 1px solid #2196F3;
 }
 
 .modal-info .data textarea {
@@ -1041,6 +1060,12 @@ footer .submit .icon-send {
   
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.modal-info .data textarea:focus {
+  border: 1px solid #2196F3;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .modal-info .data textarea::placeholder {
@@ -1072,6 +1097,11 @@ footer .submit .icon-send {
   height: 15px;
   border: 2px solid #212121;
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-origin 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 input:checked + .checkbox-icon {
